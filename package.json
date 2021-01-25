@@ -1,0 +1,17 @@
+{
+  "name": "cilvianew",
+  "version": "1.0.0",
+  "description": "cilvia studios revamp by Mustafa Al Quraishi",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mustafa Al Quraishi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
+    "express": "^4.17.1",
+    "smooth-parallax": "^1.1.2"
+  }
+}
