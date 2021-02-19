@@ -54,8 +54,12 @@ html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: scroll;
+    
+    
 }
-/* header, body {
+
+/* 
+header, body {
     color: white;
     background-color: black;
 }
@@ -66,12 +70,13 @@ html {
     background-color: black;
 } */
 
+
 #overlay {
     position: absolute;
     top: 0;
     left:0;
     width:0vw;
-    height:100vh;
+    height:120vh;
     opacity: 0.8;
     /* background-image: linear-gradient(to right, rgba(255, 138, 29, 0.959), rgba(104,104,195,1)); */
     background-image: linear-gradient(to right, rgba(81,118,184,1), rgba(188, 222, 248, 1));
@@ -98,9 +103,15 @@ html {
     height:100%;
     transition: width 0.7s;
     overflow: scroll;
+    font-size: 0.9vw;
 }
-
-#nav:hover {
+#anywhere {
+    position: absolute;
+    padding-top: 10vw;
+    font-size: 0.7vw;
+    text-align: right;
+}
+#nav:hover, #nav2:hover {
     color:#BCDEF8;
 }
 nav ul {
@@ -137,6 +148,21 @@ nav li a:hover {
     z-index: 3;
     font-family: "ApercuProMono";
     display: inline;
+    font-size: 3vw;
+}
+#anywherePhone {
+   
+    padding-top: 5vw;
+    font-size: 2.5vw;
+}
+#phoneTitle {
+    font-family: "TiffanyStdDemi";
+    font-weight: 800;
+
+    font-size: 3.5vw;
+    /* z-index: 0; */
+    line-height: 0.95;
+
 }
 #thephonecontent {
     z-index: 3;
@@ -181,15 +207,52 @@ header {
     -webkit-appearance: none;
     -moz-appearance: none;
     /* z-index: 1; */
+   
+}
+
+#nav2 {
+    padding: 5px 0;
+    text-align: center;
+    font-family: "ApercuProMono";
+    position: absolute;
+    right: 0;
+    /* margin-right: 10%; */
+    padding-right: 10ch;
+    font-size: 0.8em;
+
+    display: inline-block;
+    border: none;
+    /* padding: 1rem 2rem; */
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* z-index: 1; */
+    font-weight: 500;
 }
 
 #top-message {
     margin-top: 2ch;
     text-align: center;
     font-family: "TiffanyStdDemi";
+    font-weight: 800;
+    /* font-family: span, serif;
+    font-weight: 700;
+    font-style: normal; */
     font-size: 7vw;
     /* z-index: 0; */
     line-height: 0.95;
+
+/* 
+    font-family: mandrel-condensed, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+     */
+    
 
     /* background-color: black;
     color: white; */
@@ -203,6 +266,8 @@ header {
 #engineering {
     /* color: #8b8ac0; */
     /* color: #676ac1; */
+    /* -webkit-text-stroke: 0.1vw #BCDEF8;
+    color: #ffffff; */
     color: #BCDEF8;
     /* color: #5176B8; */
 }
@@ -210,6 +275,7 @@ header {
 #logo {
     display: block;
     z-index: -1;
+    display: none;
 }
 #videodiv {
     /* margin-top: -0.8vw;
@@ -223,6 +289,24 @@ header {
     transition: margin-top 0.5s;   
 
 }
+#videodivStatic {
+    /* margin-top: -0.8vw;
+    margin-left: -3vw; */
+    width: 100%;
+    overflow:hidden;   
+    margin-top: -3ch;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+    
+
+}
+#staticC {
+    max-width: 195px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 #videodiv > #theVid {
     min-width: 100%;
@@ -231,6 +315,7 @@ header {
 #theVid {
 
     margin: 0 auto;
+    
     /* transform: translate3d(50px, 200px, 0); */
 }
 #secondCont {
@@ -351,7 +436,7 @@ img {
 }
 
 footer {
-    font-size: 1.5vw;
+    font-size: 2vw;
     position: absolute;
     right: 0;
     margin-top: 6vw;
@@ -362,6 +447,7 @@ footer {
     padding-bottom: 3vw;
     text-decoration: none;
     color: black;
+    padding: 2vw;
 }
 a:link {
     color:inherit;
@@ -387,7 +473,7 @@ a:active {
     margin-top: -1vw;
     list-style-type: none;
     letter-spacing: 0.01vw;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 .contacts li {
     /* text-align: center; */
@@ -436,9 +522,10 @@ a:active {
     padding-top: 3vw;
     padding-bottom: 3vw;
     font-family: "ApercuProMono";
-    font-size: 2vw;
+    font-size: 3vw;
 }
 #WhatDoTitle {
+    font-size: 3vw;
     margin-top: 3vw;
     display: flex;
     align-items: center;
@@ -504,15 +591,22 @@ a:active {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
+    color: white;
+    
 }
 .projectTileTwo a {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
+    color: white;
+    
+    
 }
-
+.projectTileTwo a:hover, .projectTile a:hover {
+    color: #BCDEF8;
+}
 #theProjects {
     margin-top: 10vw;
 }
@@ -546,14 +640,124 @@ a:active {
     font-size: 2vw;
 
 }
-.smallShift {
+.TheSmallShift {
     display: none;
+   
 }
-.smallShiftTwo {
+.TheSmallShiftTwo {
     display: none;
 }
 
+
+.mainShow {
+    display:flex;
+        align-items: center;
+        justify-content:center;
+        text-align: left;
+}
+
+.projVideo {
+    margin-top: 5ch;
+    /* width: 70vw;
+    height: 50vw; */
+}
+
+#desc {
+    font-family: "ApercuProMono";
+    width: 66.7vw;
+    display: block;
+    align-items: center;
+    justify-content:center;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2ch;
+    font-size: 2vw;
+}
+
+#desc p {
+    width: 50vw;
+}
+#desc h2 {
+    font-size: 3vw;
+}
+#descInner {
+    padding-top: 2ch;
+   padding-left: 0;
+}
+
+#span {
+    width: 100vw;
+    background-color: black;
+    height: 1vw;
+}
+.projectTitle {
+    font-family: "ApercuProMedium";
+    font-size: 3vw;
+    line-height: 2ch;
+}
+.projDes {
+    line-height: 2ch;
+}
+#bold {
+    font-weight: 600;
+}
+.desDev {
+    margin-top: 5ch;
+    
+    
+}
+.desDevTwo {
+    padding-top: 2vw;
+    
+    text-align: right;
+    
+    
+}
+#desDevCon {
+    margin-top: 5ch;
+    padding-bottom: 3ch;
+    
+}
+
+#desDevCon p {
+    max-width: 100%;
+    padding-top: 3vw;
+}
+.projPhoto {
+    margin-top: 5ch;
+    width: 66.7vw;
+}
+#Behance {
+    background-image: linear-gradient(to right, rgba(81,118,184,1), rgba(188, 222, 248, 1));
+}
 @media (min-width: 576px) {
+   
+    #desDevCon p {
+      
+        padding-top: 0px;
+    }
+
+    .contacts {
+        font-size: 1vw;
+    }
+    #desc h2 {
+        font-size: 2vw;
+    }
+    
+    #desc {
+        font-family: "ApercuProMono";
+        width: 66.7vw;
+        display: block;
+        align-items: center;
+        justify-content:center;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 2ch;
+        font-size: 1.6vw;
+    }
+   
     #rowHold {
         margin-top: 0vw;
         display:flex;
@@ -595,6 +799,8 @@ a:active {
         padding-bottom: 3vw;
         text-decoration: none;
         color: black;
+        padding: 0;
+        padding-bottom: 3vw;
     }
     #exExplain {
         margin-top: 0vw;
@@ -620,7 +826,7 @@ a:active {
         padding-top: 3vw;
     }
 
-    #nav {
+    #nav, #nav2 {
         margin-top: -0.3ch;
         font-size: 0.9em;
     }
@@ -630,8 +836,9 @@ a:active {
         margin-top: 1.3ch;
         text-align: left;
         font-size: 4vw;
+     
     }
-    #videodiv {
+    #div {
         /* margin-top: -0.8vw;
         margin-left: -3vw; */
         width:100%;
@@ -680,9 +887,16 @@ a:active {
         margin-right: auto;
         font-size: 1.2vw;
     }
+   
+
 }
 
 @media (min-width: 768px) {
+    #desc {
+       
+        font-size: 1.3vw;
+    }
+  
 
 #projectTitle {
     display: flex;
@@ -751,11 +965,26 @@ a:active {
         /* z-index: -1; */
     }
     .smallShift {
-        position: absolute;
+        position:absolute;
         height: 24vw;
         background-color: black;
         color: white;
-        margin-left: -33vw;
+        /* margin-left: -33vw; */
+        
+        width: 3vw;
+        /* writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; */
+      
+    }
+    .smallShiftTest {
+        height: 24vw;
+        background-color: black;
+        color: white;
+        margin-left: 10vw;
         
         width: 3vw;
         writing-mode: vertical-rl;
@@ -764,8 +993,7 @@ a:active {
         align-items: center;
         justify-content: center;
         text-align: center;
-        /* z-index: -1; */
-        /* display:block; */
+
     }
     .smallShiftTwo {
         position: absolute;
@@ -871,8 +1099,9 @@ a:active {
     #exExplain {
         font-family: "ApercuProRegular";
         font-size: 1.1vw;
-        color: lightgrey;
+        /* color: lightgrey; */
         margin-top: -1.5vw;
+        color: #36454f;
     }
     
     #featureTwo {
@@ -886,39 +1115,81 @@ a:active {
         text-align: center;
         padding-bottom: 5vw;
         padding-top: 0vw;
- 
     }
     .projectTile {
-        display: flex;
+        position: absolute;
+        /* display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        font-family: "ApercuProMono";
+        text-align: center; */
+        /* font-family: "ApercuProMono"; */
         overflow: hidden;
         width: 36vw;
         height: 24vw;
         margin-left: 0;
         margin-right: 0;
-        color: white;
-        z-index: 1;
+        /* color: white; */
+        /* z-index: 1; */
         transition: margin-left 1s;
         /* transition: margin-right 1s; */
     }
-    .projectTileTwo {
+    .TheSmallShift {
+        /* z-index: 1; */
+        font-family: "ApercuProMono";
+        height: 24vw;
+        background-color: black;
+        background-color: #00855B;
+        color: white;
+        margin-left: -33vw;
+        font-size: 1vw;
+        width: 3vw;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+    .TheSmallShift a {
+        z-index: 1;
+    }
+    .TheSmallShiftTwo {
+        /* z-index: 1; */
         font-family: "ApercuProMono";
+        height: 24vw;
+        background-color: black;
+        background-color: #ffd451;
+        background-color: #00855B;
+        color: white;
+        margin-right: -33vw;
+        font-size: 1vw;
+        width: 3vw;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .TheSmallShiftTwo a {
+        z-index: 1;
+    }
+    .projectTileTwo {
+        position: absolute;
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: "ApercuProMono"; */
         overflow: hidden;
         width: 36vw;
         height: 24vw;
         margin-left: 0;
         margin-right: 0;
         color: white;
-        z-index: 1;
-        /* transition: margin-left 1s; */
-        transition: margin-right 1s;
+        /* z-index: 1; */
+        transition: margin-left 1s;
+        /* transition: margin-right 1s; */
     }
     
     .projectTile img {
@@ -961,6 +1232,14 @@ a:active {
 }
 
 @media (min-width: 992px) {
+    #desc {
+       
+        font-size: 0.9vw;
+    }
+  
+    #WhatDoTitle {
+        font-size: 1.2vw;
+    }
 
     #carouselExampleInterval {
         margin-top: 0ch;  
@@ -975,7 +1254,7 @@ a:active {
         padding-top: 3vw;
     }
 
-    #nav {
+    #nav, #nav2 {
         margin-top: 0ch;
         font-size: 1em;
     }
@@ -1021,8 +1300,6 @@ a:active {
         margin-top: -5ch;
     }
 }
-
-
 
 
 

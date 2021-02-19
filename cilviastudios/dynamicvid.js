@@ -77,8 +77,10 @@ video.init = function () {
         //     window.addEventListener("scroll", moveleft(yOff));
         // }
     }
-
-    window.addEventListener("scroll", trigger);
+    var width = window.screen.width;
+    if (width > 768) {
+        window.addEventListener("scroll", trigger);
+    }
 };
 
 

@@ -7,6 +7,8 @@ import sticky from "./sticky.js";
 import shift from "./shift.js";
 import int from "./projectinteractive.js"
 
+carousel.init();
+
 window.addEventListener("DOMContentLoaded", function () {
     carousel.init();
     console.log("DOMloaded");
